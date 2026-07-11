@@ -1,0 +1,113 @@
+store,category,brand,model_name,variant,ram,storage,price,price_text,price_type,currency,product_url,source_url,in_stock,scraped_at
+Hukut,Mobiles,Samsung,Samsung Galaxy M17,,,,32999,"Rs 32,999",starting,NPR,https://hukut.com/samsung-galaxy-m17,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254272+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy A17 5G,,,,33999,"Rs 33,999",starting,NPR,https://hukut.com/samsung-galaxy-a17-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254439+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy M36 5G,,,,41999,"Rs. 41,999",starting,NPR,https://hukut.com/samsung-galaxy-m36,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254556+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy A36 5G,,,,53999,"Rs. 53,999",starting,NPR,https://hukut.com/samsung-galaxy-a36,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254657+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy A37 5G,,,,64999,"Rs. 64,999",starting,NPR,https://hukut.com/samsung-galaxy-a37,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254754+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy A56 5G,,,,71999,"Rs. 71,999",starting,NPR,https://hukut.com/samsung-galaxy-a56,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254849+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy A57 5G,,,,84999,"Rs. 84,999",starting,NPR,https://hukut.com/samsung-galaxy-a57,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.254945+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy S25 FE,,,,107999,"Rs. 107,999",starting,NPR,https://hukut.com/samsung-galaxy-s25-fe,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255040+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy S25 Ultra,,,,184999,"Rs. 184,999",starting,NPR,https://hukut.com/samsung-galaxy-s25-ultra,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255137+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy S26,,,,133999,"Rs. 133,999",starting,NPR,https://hukut.com/samsung-galaxy-s26,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255233+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy S26+,,,,182999,"Rs. 182,999",starting,NPR,https://hukut.com/samsung-galaxy-s26+,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255335+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy S26 Ultra,,,,212999,"Rs. 212,999",starting,NPR,https://hukut.com/samsung-galaxy-s26-ultra,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255444+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy Z Flip 7,,,,154999,"Rs. 154,999",starting,NPR,https://hukut.com/samsung-galaxy-z-flip7,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255544+00:00
+Hukut,Mobiles,Samsung,Samsung Galaxy Z Fold 7,,,,244999,"Rs. 244,999",starting,NPR,https://hukut.com/samsung-galaxy-z-fold7,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.255638+00:00
+Hukut,Mobiles,Apple,Apple iPhone 13,,,,80399,"Rs. 80,399",starting,NPR,https://hukut.com/iphone-13-price-in-nepal,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.256412+00:00
+Hukut,Mobiles,Apple,iPhone 14,,,,93499,"Rs. 93,499",starting,NPR,https://hukut.com/iphone-14-price-in-nepal,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.256541+00:00
+Hukut,Mobiles,Apple,Apple iPhone 15,,,,122999,"Rs. 122,999",starting,NPR,https://hukut.com/iphone-15-price-in-nepal,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.256643+00:00
+Hukut,Mobiles,Apple,Apple iPhone 16e,,,,102299,"Rs. 102,299",starting,NPR,https://hukut.com/apple-iphone-16e,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.256750+00:00
+Hukut,Mobiles,Apple,Apple iPhone 16,,,,141499,"Rs. 141,499",starting,NPR,https://hukut.com/iphone-16,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.256855+00:00
+Hukut,Mobiles,Apple,Apple iPhone 17e,,,,127799,"Rs. 127,799",starting,NPR,https://hukut.com/apple-iphone-17e,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.256958+00:00
+Hukut,Mobiles,Apple,Apple iPhone 17,,,,167999,"Rs. 167,999",starting,NPR,https://hukut.com/apple-iphone-17,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.257050+00:00
+Hukut,Mobiles,Apple,Apple iPhone Air,,,,183999,"Rs. 183,999",starting,NPR,https://hukut.com/apple-iphone-air,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.257145+00:00
+Hukut,Mobiles,Apple,Apple iPhone 17 Pro,,,,228999,"Rs. 228,999",starting,NPR,https://hukut.com/apple-iphone-17-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.257248+00:00
+Hukut,Mobiles,Apple,Apple iPhone 17 Pro Max,,,,248999,"Rs. 248,999",starting,NPR,https://hukut.com/apple-iphone-17-pro-max,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.257349+00:00
+Hukut,Mobiles,Xiaomi,Redmi A5 4G,,,,16999,"Rs 16,999",starting,NPR,https://hukut.com/redmi-a5-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.257995+00:00
+Hukut,Mobiles,Xiaomi,Redmi 15C,,,,19999,"Rs. 19,999",starting,NPR,https://hukut.com/redmi-15c-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258202+00:00
+Hukut,Mobiles,Xiaomi,Redmi 15,,,,24999,"Rs. 24,999",starting,NPR,https://hukut.com/redmi-15-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258310+00:00
+Hukut,Mobiles,Xiaomi,Redmi Note 15 4G,,,,29999,"Rs. 29,999",starting,NPR,https://hukut.com/redmi-note-15-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258409+00:00
+Hukut,Mobiles,Xiaomi,Redmi Note 15 5G,,,,39999,"Rs. 39,999",starting,NPR,https://hukut.com/redmi-note-15-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258502+00:00
+Hukut,Mobiles,Xiaomi,Redmi Note 15 Pro 5G,,,,49999,"Rs. 49,999",starting,NPR,https://hukut.com/redmi-note-15-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258596+00:00
+Hukut,Mobiles,Xiaomi,Redmi Note 15 Pro+,,,,59999,"Rs. 59,999",starting,NPR,https://hukut.com/redmi-note-15-pro+,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258691+00:00
+Hukut,Mobiles,Xiaomi,Xiaomi 17 Ultra,,,,199999,"Rs. 199,999",starting,NPR,https://hukut.com/xiaomi-17-ultra,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.258794+00:00
+Hukut,Mobiles,Poco,POCO X7 Pro,,,,59999,"Rs. 59,999",starting,NPR,https://hukut.com/poco-x7-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.259537+00:00
+Hukut,Mobiles,Poco,POCO X8 Pro,,,,63999,"Rs. 63,999",starting,NPR,https://hukut.com/xiaomi-poco-x8-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.259674+00:00
+Hukut,Mobiles,Poco,POCO X8 Pro Max,,,,79999,"Rs. 79,999",starting,NPR,https://hukut.com/xiaomi-poco-x8-pro-max,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.259864+00:00
+Hukut,Mobiles,Poco,POCO F8 Pro,,,,99999,"Rs. 99,999",starting,NPR,https://hukut.com/poco-f8-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.259970+00:00
+Hukut,Mobiles,Honor,Honor Play10,,,,12499,"Rs. 12,499",starting,NPR,https://hukut.com/honor-play-10,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.260823+00:00
+Hukut,Mobiles,Honor,Honor X5c,,,,15999,"Rs. 15,999",starting,NPR,https://hukut.com/honor-x5c,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.260987+00:00
+Hukut,Mobiles,Honor,Honor X5c Plus,,,,17999,"Rs. 17,999",starting,NPR,https://hukut.com/honor-x5c-plus,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261108+00:00
+Hukut,Mobiles,Honor,Honor X6c,,,,19999,"Rs. 19,999",starting,NPR,https://hukut.com/honor-x6c,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261264+00:00
+Hukut,Mobiles,Honor,Honor X7d,,,,30999,"Rs. 30,999",starting,NPR,https://hukut.com/honor-x7d-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261379+00:00
+Hukut,Mobiles,Honor,Honor X8c,,,,34999,"Rs. 34,999",starting,NPR,https://hukut.com/honor-x8c,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261485+00:00
+Hukut,Mobiles,Honor,Honor X8d,,,,39999,"Rs. 39,999",starting,NPR,https://hukut.com/honor-x8d,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261608+00:00
+Hukut,Mobiles,Honor,Honor X9d,,,,54999,"Rs. 54,999",starting,NPR,https://hukut.com/honor-x9d,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261745+00:00
+Hukut,Mobiles,Honor,Honor 400 Lite,,,,39999,"Rs. 39,999",starting,NPR,https://hukut.com/honor-400-lite,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261872+00:00
+Hukut,Mobiles,Honor,Honor 400,,,,67999,"Rs. 67,999",starting,NPR,https://hukut.com/honor-400,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.261982+00:00
+Hukut,Mobiles,Honor,Honor 400 Pro,,,,88480,"Rs. 88,480",starting,NPR,https://hukut.com/honor-400-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.262084+00:00
+Hukut,Mobiles,Honor,Honor Magic 8 Pro,,,,199999,"Rs. 199,999",starting,NPR,https://hukut.com/honor-magic-8-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.262192+00:00
+Hukut,Mobiles,Honor,Honor Magic V5,,,,266999,"Rs. 266,999",starting,NPR,https://hukut.com/honor-magic-v5,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.262298+00:00
+Hukut,Mobiles,Vivo,Vivo Y04,,,,13999,"Rs. 13,999",starting,NPR,https://hukut.com/vivo-y04,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.263520+00:00
+Hukut,Mobiles,Vivo,Vivo Y05,,,,16999,"Rs. 16,999",starting,NPR,https://hukut.com/vivo-y05,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.263790+00:00
+Hukut,Mobiles,Vivo,Vivo Y19s,,,,16499,"Rs. 16,499",starting,NPR,https://hukut.com/vivo-y19s,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.263950+00:00
+Hukut,Mobiles,Vivo,Vivo Y19s Pro,,,,20999,"Rs. 20,999",starting,NPR,https://hukut.com/vivo-y19s-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.264094+00:00
+Hukut,Mobiles,Vivo,Vivo Y21d,,,,21499,"Rs. 21,499",starting,NPR,https://hukut.com/vivo-y21d,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.264232+00:00
+Hukut,Mobiles,Vivo,Vivo Y29,,,,24999,"Rs. 24,999",starting,NPR,https://hukut.com/vivo-y29,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.264607+00:00
+Hukut,Mobiles,Vivo,Vivo Y31d,,,,29499,"Rs. 29,499",starting,NPR,https://hukut.com/vivo-y31d,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.264863+00:00
+Hukut,Mobiles,Vivo,Vivo Y400,,,,39999,"Rs. 39,999",starting,NPR,https://hukut.com/vivo-y400,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.264999+00:00
+Hukut,Mobiles,Vivo,Vivo V50 Lite 4G,,,,37999,"Rs. 37,999",starting,NPR,https://hukut.com/vivo-v50-lite-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.265257+00:00
+Hukut,Mobiles,Vivo,Vivo V60 Lite 4G,,,,43499,"Rs. 43,499",starting,NPR,https://hukut.com/vivo-v60-lite-4g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.265439+00:00
+Hukut,Mobiles,Vivo,Vivo V50 5G,,,,67999,"Rs. 67,999",starting,NPR,https://hukut.com/vivo-v50,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.265841+00:00
+Hukut,Mobiles,Vivo,Vivo V60 5G,,,,70999,"Rs. 70,999",starting,NPR,https://hukut.com/vivo-v60-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.266040+00:00
+Hukut,Mobiles,Vivo,Vivo V70 5G,,,,83999,"Rs. 83,999",starting,NPR,https://hukut.com/vivo-v70,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.266172+00:00
+Hukut,Mobiles,Vivo,Vivo X200 Pro,,,,184999,"Rs. 184,999",starting,NPR,https://hukut.com/vivo-x200-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.266304+00:00
+Hukut,Mobiles,Vivo,Vivo X300 Pro,,,,179999,"Rs. 179,999",starting,NPR,https://hukut.com/vivo-x300-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.266439+00:00
+Hukut,Mobiles,Nothing,Nothing CMF Phone 1,,,,31699,"Rs. 31,699",starting,NPR,https://hukut.com/nothing-cmf-phone-1-price-in-nepal,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.267228+00:00
+Hukut,Mobiles,Nothing,Nothing CMF Phone 2 Pro,,,,38999,"Rs. 38,999",starting,NPR,https://hukut.com/nothing-cmf-phone-2-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.267369+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (3a) Lite,,,,38999,"Rs. 38,999",starting,NPR,https://hukut.com/nothing-phone-(3a)-lite,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.267480+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (2a),,,,46999,"Rs. 46,999",starting,NPR,https://hukut.com/nothing-phone-2a-price-in-nepal,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.267608+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (2a) Plus,,,,49999,"Rs. 49,999",starting,NPR,https://hukut.com/nothing-phone-(2a)-plus,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.267717+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (3a),,,,53999,"Rs. 53,999",starting,NPR,https://hukut.com/nothing-phone-(3a),https://hukut.com/mobile-phones,,2026-07-03T03:39:54.267890+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (4a),,,,58499,"Rs. 58,499",starting,NPR,https://hukut.com/nothing-phone-(4a),https://hukut.com/mobile-phones,,2026-07-03T03:39:54.268004+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (3a) Pro,,,,61999,"Rs. 61,999",starting,NPR,https://hukut.com/nothing-phone-(3a)-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.268105+00:00
+Hukut,Mobiles,Nothing,Nothing Phone (3),,,,99999,"Rs. 99,999",starting,NPR,https://hukut.com/nothing-phone-(3),https://hukut.com/mobile-phones,,2026-07-03T03:39:54.268207+00:00
+Hukut,Mobiles,OnePlus,OnePlus Nord CE 5,,,,53999,"Rs. 53,999",starting,NPR,https://hukut.com/oneplus-nord-ce-5,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.268873+00:00
+Hukut,Mobiles,OnePlus,OnePlus Nord 5,,,,73999,"Rs. 73,999",starting,NPR,https://hukut.com/oneplus-nord-5,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.268992+00:00
+Hukut,Mobiles,OnePlus,OnePlus 13R,,,,83999,"Rs. 83,999",starting,NPR,https://hukut.com/oneplus-13r,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.269096+00:00
+Hukut,Mobiles,OnePlus,OnePlus 15R,,,,98499,"Rs. 98,499",starting,NPR,https://hukut.com/oneplus-15r,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.269199+00:00
+Hukut,Mobiles,OnePlus,OnePlus 12,,,,139999,"Rs. 139,999",starting,NPR,https://hukut.com/oneplus-12-price-in-nepal,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.269304+00:00
+Hukut,Mobiles,OnePlus,OnePlus 13,,,,141999,"Rs. 141,999",starting,NPR,https://hukut.com/oneplus-13,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.269403+00:00
+Hukut,Mobiles,OnePlus,OnePlus 15,,,,169999,"Rs. 169,999",starting,NPR,https://hukut.com/oneplus-15,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.269502+00:00
+Hukut,Mobiles,Realme,Realme Note 60x,,,,13999,"Rs. 13,999",starting,NPR,https://hukut.com/realme-note-60x,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.270281+00:00
+Hukut,Mobiles,Realme,Realme Note 60,,,,16499,"Rs. 16,499",starting,NPR,https://hukut.com/realme-note-60,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.270419+00:00
+Hukut,Mobiles,Realme,Realme C75,,,,24999,"Rs. 24,999",starting,NPR,https://hukut.com/realme-c75,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.270719+00:00
+Hukut,Mobiles,Realme,Realme 14T,,,,36999,"Rs. 36,999",starting,NPR,https://hukut.com/realme-14t-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.270839+00:00
+Hukut,Mobiles,Realme,Realme 15T,,,,39999,"Rs. 39,999",starting,NPR,https://hukut.com/realme-15t,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.270951+00:00
+Hukut,Mobiles,Realme,Realme 14,,,,49999,"Rs. 49,999",starting,NPR,https://hukut.com/realme-14-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.271064+00:00
+Hukut,Mobiles,Realme,Realme 15 Pro,,,,66999,"Rs. 66,999",starting,NPR,https://hukut.com/realme-15-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.271171+00:00
+Hukut,Mobiles,Oppo,OPPO Reno 14F,,,,57999,"Rs. 57,999",starting,NPR,https://hukut.com/oppo-reno14-f,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.272311+00:00
+Hukut,Mobiles,Oppo,OPPO Reno 15,,,,89999,"Rs. 89,999",starting,NPR,https://hukut.com/oppo-reno-15,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.272513+00:00
+Hukut,Mobiles,Oppo,OPPO Find N5,,,,249999,"Rs. 249,999",starting,NPR,https://hukut.com/oppo-find-n5,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.272628+00:00
+Hukut,Mobiles,Infinix,Infinix Smart 10,,,,14999,"Rs. 14,999",starting,NPR,https://hukut.com/infinix-smart-10,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.273301+00:00
+Hukut,Mobiles,Infinix,Infinix Hot 60i,,,,16999,"Rs. 16,999",starting,NPR,https://hukut.com/infinix-hot-60i,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.273483+00:00
+Hukut,Mobiles,Infinix,Infinix Hot 60 Pro,,,,24999,"Rs. 24,999",starting,NPR,https://hukut.com/infinix-hot-60-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.273588+00:00
+Hukut,Mobiles,Infinix,Infinix Hot 60 Pro+,,,,29999,"Rs. 29,999",starting,NPR,https://hukut.com/infinix-hot-60-pro+,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.273693+00:00
+Hukut,Mobiles,Infinix,Infinix Note 50s,,,,35999,"Rs. 35,999",starting,NPR,https://hukut.com/infinix-note-50s,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.273800+00:00
+Hukut,Mobiles,Infinix,Infinix GT 30,,,,36999,"Rs. 36,999",starting,NPR,https://hukut.com/infinix-gt-30,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.273902+00:00
+Hukut,Mobiles,Infinix,Infinix GT 30 Pro,,,,47999,"Rs. 47,999",starting,NPR,https://hukut.com/infinix-gt-30-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.274006+00:00
+Hukut,Mobiles,Infinix,Infinix Note Edge,,,,41999,"Rs. 41,999",starting,NPR,https://hukut.com/infinix-note-edge,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.274111+00:00
+Hukut,Mobiles,Infinix,Infinix Note 60,,,,45999,"Rs. 45,999",starting,NPR,https://hukut.com/infinix-note-60,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.274418+00:00
+Hukut,Mobiles,Infinix,Infinix Note 60 Pro,,,,59999,"Rs. 59,999",starting,NPR,https://hukut.com/infinix-note-60-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.274562+00:00
+Hukut,Mobiles,Motorola,Moto G05,,,,12499,"Rs. 12,499",starting,NPR,https://hukut.com/motorola-moto-g05,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.275453+00:00
+Hukut,Mobiles,Motorola,Moto G35,,,,19999,"Rs. 19,999",starting,NPR,https://hukut.com/motorola-moto-g35-5G,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.275631+00:00
+Hukut,Mobiles,Motorola,Moto G45,,,,24999,"Rs. 24,999",starting,NPR,https://hukut.com/motorola-moto-g45-5G,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.275773+00:00
+Hukut,Mobiles,Motorola,Moto G64,,,,27499,"Rs. 27,499",starting,NPR,https://hukut.com/motorola-moto-g64-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.275903+00:00
+Hukut,Mobiles,Motorola,Moto G85,,,,34499,"Rs. 34,499",starting,NPR,https://hukut.com/motorola-moto-g85-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.276032+00:00
+Hukut,Mobiles,Motorola,Moto G96,,,,44999,"Rs. 44,999",starting,NPR,https://hukut.com/motorola-g96-5g,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.276158+00:00
+Hukut,Mobiles,Motorola,Moto Edge 50 Fusion,,,,46999,"Rs. 46,999",starting,NPR,https://hukut.com/motorola-edge-50-fusion,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.276315+00:00
+Hukut,Mobiles,ZTE,RedMagic 11 Pro,,,,164999,"Rs. 164,999",starting,NPR,https://hukut.com/zte-nubia-redmagic-11-pro,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.279314+00:00
+Hukut,Mobiles,AI Plus,Ai+ Pulse,,,,14999,"Rs. 14,999",starting,NPR,https://hukut.com/ai+-pulse,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.280344+00:00
+Hukut,Mobiles,AI Plus,Ai+ Nova 5G,,,,18499,"Rs. 18,499",starting,NPR,https://hukut.com/ai+-nova,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.280511+00:00
+Hukut,Mobiles,Tecno,Tecno Spark 30C,,,,16490,"Rs. 16,490",starting,NPR,https://hukut.com/tecno-spark-30c,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.281493+00:00
+Hukut,Mobiles,Tecno,Tecno Spark 30,,,,22490,"Rs. 22,490",starting,NPR,https://hukut.com/tecno-spark-30,https://hukut.com/mobile-phones,,2026-07-03T03:39:54.281656+00:00
