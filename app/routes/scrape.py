@@ -3,7 +3,8 @@ import sys
 from pathlib import Path
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
-
+from app.celery.celery_app import celery_app
+from app.tasks.scrape_tasks import run_spider_job
 
 router = APIRouter(prefix="/scrape",tags=['scraping'])
 
@@ -17,41 +18,90 @@ ALLOWED_SCRAPERS={
     "yantra"
 }
 
-def run_spider(spider_name:str,category:str,brand:str):
-    # python -m scrapy crawl myspider -a category=electronics -a brand=sony
+# def run_spider(spider_name:str,category:str,brand:str):
+#     # python -m scrapy crawl myspider -a category=electronics -a brand=sony
 
-    command=[
-        sys.executable,
-        "-m",
-        "scrapy",
-        "crawl",
-        spider_name,
-        "-a",
-        f"category={category}",
-        "-a",
-        f"brand={brand}"
-    ]
+#     command=[
+#         sys.executable,
+#         "-m",
+#         "scrapy",
+#         "crawl",
+#         spider_name,
+#         "-a",
+#         f"category={category}",
+#         "-a",
+#         f"brand={brand}"
+#     ]
 
-    subprocess.run(command,cwd=SCRAPPER_DIR,check=False)
+#     subprocess.run(command,cwd=SCRAPPER_DIR,check=False)
 
+
+
+# @router.post('/{spider_name}')
+# async def trigger_scraper(
+#     spider_name:str,
+#     background_tasks:BackgroundTasks,
+#     category:str ="mobiles",
+#     brand:str="samsung"
+# ):
+#     if spider_name not in ALLOWED_SCRAPERS:
+#         raise HTTPException(status_code=404,detail=f"Scraper {spider_name} not found")
+    
+#     if not SCRAPPER_DIR.exists():
+#         raise HTTPException(status_code=500,detail=f"Scraper directory {SCRAPPER_DIR} not found")
+    
+#     background_tasks.add_task(run_spider,spider_name,category,brand)
+
+
+#     return {
+#         "message":f" Scraper {spider_name} triggered successfully",
+#         "category":category,
+#         "brand":brand,
+#         "spider_name":spider_name
+#     }
 
 
 @router.post('/{spider_name}')
-async def trigger_scraper(
+async def trigger_scrapper(
     spider_name:str,
-    background_tasks:BackgroundTasks,
-    category:str ="mobiles",
+    category:str="mobiles",
     brand:str="samsung"
 ):
     if spider_name not in ALLOWED_SCRAPERS:
         raise HTTPException(status_code=404,detail=f"Scraper {spider_name} not found")
     
-    background_tasks.add_task(run_spider,spider_name,category,brand)
-
+    if not SCRAPPER_DIR.exists():
+        raise HTTPException(status_code=500,detail=f"Scraper directory {SCRAPPER_DIR} not found")
+    
+    # Trigger the Celery task to run the spider
+    task = run_spider_job.delay(
+        spider_name=spider_name,
+        category=category,
+        brand=brand
+    )
 
     return {
-        "message":f" Scraper {spider_name} triggered successfully",
+        "message":f" Scraper {spider_name} job Queued!",
+        "task_id":task.id,
+        "spider_name":spider_name,
         "category":category,
         "brand":brand,
-        "spider_name":spider_name
     }
+
+
+@router.get("/jobs/{task_id}")
+async def get_scraper_job_status(task_id:str):
+    task_result = celery_app.AsyncResult(task_id)
+
+    response= {
+        "task_id":task_id,
+        "status":task_result.status,
+    }
+
+    if task_result.successful():
+        response["result"]=task_result.result
+
+    elif task_result.failed():
+        response["error"]=str(task_result.result)
+
+    return response

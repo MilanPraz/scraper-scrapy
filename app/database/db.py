@@ -1,9 +1,12 @@
 from collections.abc import AsyncGenerator
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine,async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase, relationship
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-DATABASE_URL= "postgresql+asyncpg://avnadmin:AVNS_yp0t9X_pVKKoGpSjZEQ@pg-3121b00b-scrape.c.aivencloud.com:11782/defaultdb?ssl=require"
+DATABASE_URL= os.getenv("DATABASE_URL","")
 
 class Base(DeclarativeBase):
     pass

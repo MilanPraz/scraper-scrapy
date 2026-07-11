@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 
-from app.db import create_db_and_tables, get_async_session
+from app.database.db import create_db_and_tables, get_async_session
 from app.routes import products
 from app.routes import scrape
 

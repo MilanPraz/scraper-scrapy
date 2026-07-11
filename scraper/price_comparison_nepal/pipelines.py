@@ -10,8 +10,8 @@ PROJECT_ROOT=Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
     
-from app.models import Product
-from app.sync_db import SyncSessionLocal
+from app.database.models import Product
+from app.database.sync_db import SyncSessionLocal
 
 
 def utc_now():

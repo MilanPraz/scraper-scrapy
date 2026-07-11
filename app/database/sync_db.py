@@ -1,7 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL= "postgresql+psycopg://avnadmin:AVNS_yp0t9X_pVKKoGpSjZEQ@pg-3121b00b-scrape.c.aivencloud.com:11782/defaultdb?sslmode=require"
+load_dotenv()
+
+DATABASE_URL= os.getenv("DATABASE_URL_SYNC","")
 
 # scrappy is mostly synchronous, use a synchronous engine and session for scrappy to use
 

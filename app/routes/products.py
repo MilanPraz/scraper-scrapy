@@ -2,14 +2,21 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import func, or_, select,and_
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.db import get_async_session
-from app.models import Product
-from app.schemas import ProductResponse
-from app.schemas import ProductCreate
+from app.database.db import get_async_session
+from app.database.models import Product
+from app.schemas.schemas import ProductResponse
+from app.schemas.schemas import ProductCreate
 from datetime import datetime ,timezone
 from uuid import UUID
 
 from app.utils import to_aware_utc
+
+from app.redis.cache import (
+    make_products_cache_key,
+    clear_product_cache,
+    set_cached_products_response,
+    get_cached_products_response 
+)
 
 router = APIRouter(prefix="/products",tags=['products'])
 
@@ -45,6 +52,17 @@ async def get_products(
     source:str | None = None
     ):
     try:
+        #redis cache implement
+
+        cache_key= make_products_cache_key(q,brand,category,source)
+
+        cached_response=await get_cached_products_response(cache_key)
+
+        if cached_response:
+            cached_response["cached"]=True
+            return cached_response
+
+
         # lets create a query SQLAlchemy object to fetch products from the database
         query=select(Product).order_by(Product.created_at.desc())
 
@@ -70,11 +88,21 @@ async def get_products(
         result= await session.execute(query)
         products=result.scalars().all()
 
-        return {
+        products_data=[
+            ProductResponse.model_validate(product).model_dump(mode="json") for product in products
+        ]
+
+        response = {
             "message":"Products fetched successfully",
             "count":len(products),
-            "data":products
+            "data":products_data,
+            "cached":False
         }
+
+        # cache the response in redis for future requests
+        await set_cached_products_response(cache_key,response)
+
+        return response
     
     except Exception as e:
         raise HTTPException(
@@ -127,6 +155,9 @@ async def create_product(payload:ProductCreate,session:AsyncSession=Depends(get_
         session.add(product)
         await session.commit()
         await session.refresh(product)
+
+        # await clear_product_cache()
+
         return product
     
     except Exception as e:
@@ -161,6 +192,7 @@ async def upsert_product_data(data:dict,session:AsyncSession):
 # 1. It checks if a product with the same store and product_url already exists in the database.
 # 2. If it exists, it updates the existing product with the new data.
 
+# this is not for scraper , just for swagger test
 @router.post("/upsert")
 async def upsert_product(payload:ProductCreate,session:AsyncSession= Depends(get_async_session)):
     try:

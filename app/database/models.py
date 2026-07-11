@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Float, String, Text, DateTime, ForeignKey, UniqueConstraint
 from sqlalchemy.dialects.postgresql import UUID as PostgresUUID
 from sqlalchemy.orm import Mapped,mapped_column
-from app.db import Base
+from app.database.db import Base
 from uuid import UUID as PythonUUID, uuid4
 from datetime import datetime, timezone
 
