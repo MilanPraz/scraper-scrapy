@@ -19,6 +19,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         'http://localhost:3000',
+        'https://kati-ho.vercel.app',
+        'https://katiho.milanprajapati.com.np'
     ],
     allow_credentials=True,
     allow_methods=["*"],
