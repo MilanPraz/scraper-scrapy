@@ -1,6 +1,6 @@
 [project]
 name = "fastapi-scrapy-scraper"
-version = "0.0.1"
+version = "0.0.2"
 description = "A robust web scraping solution built with Scrapy to efficiently extract, clean, and store data from target websites. Includes custom spiders, middleware for proxy rotation, and pipelines for data validation. Ideal for automated data collection and monitoring tasks."
 readme = "README.md"
 requires-python = ">=3.13"

@@ -163,6 +163,11 @@ class SaveProductToDatabasePipeline:
 
             data["scraped_at"]=to_aware_utc(data.get("scraped_at"))
 
+            # Important: DB does not allow NULL for in_stock
+            if data.get("in_stock") is None:
+                data["in_stock"] = True
+
+
             result=session.execute(
                 select(Product).where(
                     Product.store==data["store"],
