@@ -1,5 +1,4 @@
-import subprocess
-import sys
+
 from pathlib import Path
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
@@ -37,28 +36,6 @@ ALLOWED_SCRAPERS={
 
 
 
-# @router.post('/{spider_name}')
-# async def trigger_scraper(
-#     spider_name:str,
-#     background_tasks:BackgroundTasks,
-#     category:str ="mobiles",
-#     brand:str="samsung"
-# ):
-#     if spider_name not in ALLOWED_SCRAPERS:
-#         raise HTTPException(status_code=404,detail=f"Scraper {spider_name} not found")
-    
-#     if not SCRAPPER_DIR.exists():
-#         raise HTTPException(status_code=500,detail=f"Scraper directory {SCRAPPER_DIR} not found")
-    
-#     background_tasks.add_task(run_spider,spider_name,category,brand)
-
-
-#     return {
-#         "message":f" Scraper {spider_name} triggered successfully",
-#         "category":category,
-#         "brand":brand,
-#         "spider_name":spider_name
-#     }
 
 
 @router.post('/{spider_name}')
