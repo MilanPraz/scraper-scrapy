@@ -23,7 +23,7 @@ class Product(Base):
     brand:Mapped[str]=mapped_column(String(100),nullable=False)
 
     # product info
-    model_name:Mapped[str]=mapped_column(String(100),nullable=False)
+    model_name:Mapped[str]=mapped_column(Text,nullable=False)
     variant:Mapped[str | None]=mapped_column(String(100),nullable=True)
 
     ram:Mapped[str | None]=mapped_column(String(100),nullable=True)
@@ -31,6 +31,7 @@ class Product(Base):
 
     # price info
     price:Mapped[float | None]=mapped_column(Float,nullable=True)
+    discounted_price: Mapped[float | None] = mapped_column(Float, nullable=True)
     price_text:Mapped[str | None]=mapped_column(String(100),nullable=True)
     price_type:Mapped[str | None]=mapped_column(String(50),nullable=True)
     currency:Mapped[str]=mapped_column(String(10),nullable=False,default="NPR")
@@ -38,6 +39,7 @@ class Product(Base):
     # urls
     product_url:Mapped[str]=mapped_column(Text,nullable=False)
     source_url:Mapped[str]=mapped_column(Text,nullable=False)
+    image_url: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     #status
     in_stock:Mapped[bool]=mapped_column(nullable=False,default=True)

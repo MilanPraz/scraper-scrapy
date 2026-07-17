@@ -44,11 +44,13 @@ class ProductValidationPipeline:
         "product_url",
         "source_url",
         "scraped_at",
+    
     )
 
     exact_price_required_fields = (
-        "variant",
+        # "variant",
         "storage",
+
     )
 
     def process_item(self, item):
@@ -67,7 +69,7 @@ class ProductValidationPipeline:
 
         if (
             isinstance(price, bool)
-            or not isinstance(price, int)
+            or not isinstance(price, (int, float))
         ):
             raise DropItem(
                 f"Invalid price type for "

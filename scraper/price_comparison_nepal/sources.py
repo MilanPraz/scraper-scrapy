@@ -155,6 +155,14 @@ YANTRA_SOURCES={
         "parser":"mobile",
     }
 }
+
+MOBILEMANDU_SOURCES={
+    "mobiles":{
+        "category":"Mobiles",
+        "url":"https://mobilemandu.com/categories/mobile-phones",
+        "parser":"mobile",
+    }
+}
     # "tvs": {
     #     "samsung": {
     #         "brand": "Samsung",

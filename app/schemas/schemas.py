@@ -16,10 +16,13 @@ class ProductCreate(BaseModel):
     price: float | None = None
     price_text: str | None = None
     price_type: str | None = None
+    discounted_price: float | None = None
     currency: str = "NPR"
 
     product_url: str
     source_url: str
+    image_url: str | None = None
+
 
     in_stock: bool = True
     scraped_at: datetime | None = None

@@ -62,3 +62,17 @@ PENDING
 STARTED
 SUCCESS
 FAILURE
+
+# Migration Steps
+
+run this cmd:
+
+```
+uv run alembic revision --autogenerate -m "add image url and discounted price to products"
+```
+
+then apply migration:
+
+```
+uv run alembic upgrade head
+```

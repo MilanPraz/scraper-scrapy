@@ -9,6 +9,7 @@ dependencies = [
     "asyncpg>=0.31.0",
     "celery>=5.6.3",
     "fastapi>=0.139.0",
+    "playwright>=1.61.0",
     "psycopg[binary]>=3.3.4",
     "pydantic>=2.13.4",
     "python-dotenv>=1.2.2",

@@ -189,3 +189,21 @@ def detect_brand_from_model(
 
     # Final fallback: first word of model name.
     return model_text.split()[0]
+
+
+
+def extract_hukut_price(product) -> str | None:
+    text_parts = product.xpath(".//text()[normalize-space()]").getall()
+
+    full_text = " ".join(
+        clean_text(text)
+        for text in text_parts
+        if clean_text(text)
+    )
+
+    match = re.search(r"Rs\.?\s*([\d,]+)", full_text)
+
+    if not match:
+        return None
+
+    return f"Rs {match.group(1)}"

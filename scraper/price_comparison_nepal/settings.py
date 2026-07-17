@@ -101,6 +101,7 @@ FEED_EXPORT_FIELDS = [
     "currency",
     "product_url",
     "source_url",
+    "image_url",
     "in_stock",
     "scraped_at",
 ]
@@ -136,5 +137,14 @@ PLAYWRIGHT_LAUNCH_OPTIONS = {
 ROBOTSTXT_USER_AGENT = "NepalPriceComparisonBot"
 # Let Chromium send its normal browser User-Agent.
 
-USER_AGENT = None
+# USER_AGENT = None
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/120.0.0.0 Safari/537.36"
+)
 
+DEFAULT_REQUEST_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
