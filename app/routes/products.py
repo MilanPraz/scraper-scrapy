@@ -6,10 +6,10 @@ from app.database.db import get_async_session
 from app.database.models import Product
 from app.schemas.schemas import ProductResponse
 from app.schemas.schemas import ProductCreate
-from datetime import datetime ,timezone
+from app.utils.search_filter import build_product_search_filter
 from uuid import UUID
 
-from app.utils import to_aware_utc
+# from app.utils import to_aware_utc
 
 from app.redis.cache import (
     make_products_cache_key,
@@ -17,31 +17,32 @@ from app.redis.cache import (
     set_cached_products_response,
     get_cached_products_response 
 )
+from scraper.price_comparison_nepal.pipelines import to_aware_utc
 
 router = APIRouter(prefix="/products",tags=['products'])
 
 
 
 
-def build_product_search_filter(token:str):
+# def build_product_search_filter(token:str):
 
-    compact_token= token.lower().replace(" ","")
+#     compact_token= token.lower().replace(" ","")
 
-    return or_(
-        Product.store.ilike(f"%{token}%"),
-        Product.category.ilike(f"%{token}%"),
-        Product.brand.ilike(f"%{token}%"),
-        Product.model_name.ilike(f"%{token}%"),
-        Product.variant.ilike(f"%{token}%"),
-        Product.ram.ilike(f"%{token}%"),
-        Product.storage.ilike(f"%{token}%"),
-        Product.price_text.ilike(f"%{token}%"),
+#     return or_(
+#         Product.store.ilike(f"%{token}%"),
+#         Product.category.ilike(f"%{token}%"),
+#         Product.brand.ilike(f"%{token}%"),
+#         Product.model_name.ilike(f"%{token}%"),
+#         Product.variant.ilike(f"%{token}%"),
+#         Product.ram.ilike(f"%{token}%"),
+#         Product.storage.ilike(f"%{token}%"),
+#         Product.price_text.ilike(f"%{token}%"),
 
-        func.replace(func.lower(Product.ram)," ","").ilike(f"%{compact_token}%"),
-        func.replace(func.lower(Product.storage)," ","").ilike(f"%{compact_token}%"),
-        func.replace(func.lower(Product.variant)," ","").ilike(f"%{compact_token}%")
+#         func.replace(func.lower(Product.ram)," ","").ilike(f"%{compact_token}%"),
+#         func.replace(func.lower(Product.storage)," ","").ilike(f"%{compact_token}%"),
+#         func.replace(func.lower(Product.variant)," ","").ilike(f"%{compact_token}%")
 
-    )
+#     )
 
 @router.get("/")
 async def get_products(
@@ -64,16 +65,15 @@ async def get_products(
 
 
         # lets create a query SQLAlchemy object to fetch products from the database
-        query=select(Product).order_by(Product.created_at.desc())
+        query=select(Product)
 
 
         if q:
             tokens=[
                 token.strip() for token in q.split() if token.strip()
             ]
-            query = query.where(
-                and_(*[build_product_search_filter(token) for token in tokens])
-            )
+            for token in tokens:
+                query = query.where(build_product_search_filter(token))
         # query= query.where(Product.model_name.ilike(f"%{q}%"))
 
         if brand:
@@ -84,6 +84,21 @@ async def get_products(
 
         if source:
             query= query.where(Product.store.ilike(f"%{source}%"))
+
+        if q:
+            q_lower=q.lower()
+
+            query = query.order_by(
+                func.greatest(
+                    func.similarity(func.lower(Product.brand),q_lower),
+                    func.similarity(func.lower(Product.model_name),q_lower),
+                    func.similarity(func.lower(Product.category),q_lower),
+                ).desc()
+                ,Product.created_at.desc() 
+            )
+        else:
+            query = query.order_by(Product.created_at.desc())
+            
 
         result= await session.execute(query)
         products=result.scalars().all()
