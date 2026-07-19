@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Float, String, Text, DateTime, ForeignKey, UniqueConstraint
+from sqlalchemy import Column, Float, Integer, String, Text, DateTime, ForeignKey, UniqueConstraint
 from sqlalchemy.dialects.postgresql import UUID as PostgresUUID
 from sqlalchemy.orm import Mapped,mapped_column
 from app.database.db import Base
@@ -60,3 +60,33 @@ class Product(Base):
         UniqueConstraint("store","product_url",name="unique_store_product_url"),
     )
     # same store + same product_url = same product
+
+
+
+# class SearchSuggestion(Base):
+#     __tablename__= "search_suggestions"
+
+#     id:Mapped[PythonUUID] = mapped_column(PostgresUUID(as_uuid==True),primary_key=True,default=uuid4)
+#     label:Mapped[str]= mapped_column(Text,nullable=False)
+#     type:Mapped[str] = mapped_column(String(50),nullable=False)
+#     value:Mapped[str]= mapped_column(Text,nullable=False)
+#     popularity:Mapped[int]= mapped_column(Integer,nullable=False,default=0)
+#     created_at: Mapped[datetime] = mapped_column(
+#         DateTime(timezone=True),
+#         default=utc_now,
+#     )
+
+#     updated_at: Mapped[datetime] = mapped_column(
+#         DateTime(timezone=True),
+#         default=utc_now,
+#         onupdate=utc_now,
+#     )
+
+
+#     __table_args__ = (
+#         UniqueConstraint(
+#             "type",
+#             "value",
+#             name="unique_suggestion_type_value"
+#         )
+#     )

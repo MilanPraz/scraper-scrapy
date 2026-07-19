@@ -1,9 +1,11 @@
 
 from pathlib import Path
 
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
+from app import limiter
 from app.celery.celery_app import celery_app
 from app.tasks.scrape_tasks import run_spider_job
+from app.limiter.rate_limiter import limiter
 
 router = APIRouter(prefix="/scrape",tags=['scraping'])
 
@@ -39,7 +41,9 @@ ALLOWED_SCRAPERS={
 
 
 @router.post('/{spider_name}')
+@limiter.limit("3/minute")
 async def trigger_scrapper(
+    request:Request,
     spider_name:str,
     category:str="mobiles",
     brand:str="samsung"

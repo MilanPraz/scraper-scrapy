@@ -1,7 +1,8 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy import func, or_, select,and_
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.limiter.rate_limiter import limiter
 from app.database.db import get_async_session
 from app.database.models import Product
 from app.schemas.schemas import ProductResponse
@@ -45,7 +46,9 @@ router = APIRouter(prefix="/products",tags=['products'])
 #     )
 
 @router.get("/")
+@limiter.limit("30/minute")
 async def get_products(
+    request:Request,
     session:AsyncSession=Depends(get_async_session),
     q:str | None =None,
     brand: str | None =None,
@@ -225,3 +228,4 @@ async def upsert_product(payload:ProductCreate,session:AsyncSession= Depends(get
         await session.rollback()
         raise HTTPException(status_code=500,detail="Product upsert failed: "+str(e))
        
+
