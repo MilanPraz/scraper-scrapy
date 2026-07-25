@@ -76,3 +76,23 @@ then apply migration:
 ```
 uv run alembic upgrade head
 ```
+
+# Errors Encounter so Far & Solutions
+
+### Problem 1
+
+```
+    from app.routes import products
+  File "D:\python\fastapi\test\app\routes\products.py", line 5, in <module>
+    from app.limiter.rate_limiter import limiter
+  File "D:\python\fastapi\test\app\limiter\rate_limiter.py", line 1, in <module>
+    from slowapi import Limiter, _rate_limit_exceeded_handler
+ModuleNotFoundError: No module named 'slowapi'
+```
+
+### Solution:
+
+```
+uv sync
+uv run uvicorn app.main:app --reloa
+```
