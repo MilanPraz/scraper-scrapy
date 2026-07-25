@@ -10,12 +10,18 @@ services:
       - redis
     expose:
       - "8000"
+    networks:
+      - global_web
+      - internal
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.network=global_web"
+
       - "traefik.http.routers.katiho-api.rule=Host(`api.katiho.milanprajapati.com.np`)"
       - "traefik.http.routers.katiho-api.entrypoints=websecure"
       - "traefik.http.routers.katiho-api.tls=true"
       - "traefik.http.routers.katiho-api.tls.certresolver=letsencrypt"
+
       - "traefik.http.services.katiho-api.loadbalancer.server.port=8000"
 
   worker:
@@ -27,6 +33,8 @@ services:
       - .env
     depends_on:
       - redis
+    networks:
+      - internal
 
   beat:
     build: .
@@ -37,13 +45,19 @@ services:
       - .env
     depends_on:
       - redis
+    networks:
+      - internal
 
   redis:
     image: redis:7-alpine
     container_name: katiho_redis
     restart: unless-stopped
+    networks:
+      - internal
 
 networks:
-  default:
+  global_web:
     external: true
-    name: dokploy-network
+
+  internal:
+    driver: bridge
