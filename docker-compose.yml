@@ -35,5 +35,4 @@ services:
     image: redis:7-alpine
     container_name: kati_ho_redis
     restart: unless-stopped
-    ports:
-      - "6379:6379"
+
