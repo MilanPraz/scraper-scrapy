@@ -8,9 +8,16 @@ services:
       - .env
     depends_on:
       - redis
-    ports:
-      - "8000:8000"
-  
+    expose:
+      - "8000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.katiho-api.rule=Host(`api.katiho.milanprajapati.com.np`)"
+      - "traefik.http.routers.katiho-api.entrypoints=websecure"
+      - "traefik.http.routers.katiho-api.tls=true"
+      - "traefik.http.routers.katiho-api.tls.certresolver=letsencrypt"
+      - "traefik.http.services.katiho-api.loadbalancer.server.port=8000"
+
   worker:
     build: .
     container_name: katiho_worker
@@ -24,7 +31,7 @@ services:
   beat:
     build: .
     container_name: katiho_beat
-    command: celery -A app.celery.celery_app.celery_app beat --loglevel=info 
+    command: celery -A app.celery.celery_app.celery_app beat --loglevel=info
     restart: unless-stopped
     env_file:
       - .env
@@ -33,6 +40,10 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: kati_ho_redis
+    container_name: katiho_redis
     restart: unless-stopped
 
+networks:
+  default:
+    external: true
+    name: dokploy-network
