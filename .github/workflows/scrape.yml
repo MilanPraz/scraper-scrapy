@@ -1,0 +1,62 @@
+name: Scheduled Scrapers
+
+on:
+  schedule:
+    # Every 6 hours
+    - cron: "0 */6 * * *"
+
+  # Allows you to run it manually from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpq-dev
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright Chromium
+        run: |
+          python -m playwright install chromium
+          python -m playwright install-deps chromium
+
+      - name: Run Hukut spider
+        working-directory: scraper
+        env:
+          DATABASE_URL_SYNC: ${{ secrets.DATABASE_URL_SYNC }}
+          CACHE_REDIS_URL: ${{ secrets.CACHE_REDIS_URL }}
+        run: |
+          python -m scrapy crawl hukut -a category=mobiles -a brand=all
+
+      - name: Run Mobilemandu spider
+        working-directory: scraper
+        env:
+          DATABASE_URL_SYNC: ${{ secrets.DATABASE_URL_SYNC }}
+          CACHE_REDIS_URL: ${{ secrets.CACHE_REDIS_URL }}
+        run: |
+          python -m scrapy crawl mobilemandu -a category=mobiles -a brand=all
+
+      - name: Run Yantra spider
+        working-directory: scraper
+        env:
+          DATABASE_URL_SYNC: ${{ secrets.DATABASE_URL_SYNC }}
+          CACHE_REDIS_URL: ${{ secrets.CACHE_REDIS_URL }}
+        run: |
+          python -m scrapy crawl yantra -a category=mobiles -a brand=all

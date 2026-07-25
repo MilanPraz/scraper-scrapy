@@ -1,8 +1,39 @@
 services:
+  api:
+    build: .
+    container_name: katiho_api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+  
+  worker:
+    build: .
+    container_name: katiho_worker
+    command: celery -A app.celery.celery_app.celery_app worker --loglevel=info
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
+  beat:
+    build: .
+    container_name: katiho_beat
+    command: celery -A app.celery.celery_app.celery_app beat --loglevel=info 
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
   redis:
     image: redis:7-alpine
-    container_name: price_compare_redis
+    container_name: kati_ho_redis
+    restart: unless-stopped
     ports:
       - "6379:6379"
-
-    restart: unless-stopped
